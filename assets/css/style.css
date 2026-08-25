@@ -1,6 +1,16 @@
+/*
+   ALTERNATIVE COLOR PALETTE
+   Burgundy:       #6B1734
+   Dark Burgundy:  #3A0D1B
+   Gold:           #D4A72C
+   Gold Hover:     #B88A1F
+   Warm Cream:     #FFF7E6
+   White:          #FFFFFF
+   Dark Text:      #292524
+*/
+
 /* =========================================
    BRITECH COLLEGE LIBRARY
-   style.css
 ========================================= */
 
 
@@ -20,8 +30,8 @@ html {
 
 body {
     font-family: 'Poppins', sans-serif;
-    color: #1f2937;
-    background: #ffffff;
+    color: #292524;
+    background: #FFFFFF;
     line-height: 1.6;
 }
 
@@ -35,15 +45,15 @@ img {
 }
 
 :root {
-    --primary-blue: #0057B8;
-    --dark-blue: #003366;
-    --light-blue: #EAF3FF;
-    --primary-yellow: #FFD100;
-    --dark-yellow: #E6B800;
-    --white: #ffffff;
-    --light-gray: #F5F7FA;
-    --gray: #6B7280;
-    --dark: #1F2937;
+    --primary-color: #6B1734;
+    --dark-color: #3A0D1B;
+    --light-accent: #FFF7E6;
+    --accent-color: #D4A72C;
+    --accent-hover: #B88A1F;
+    --white: #FFFFFF;
+    --light-gray: #FFF7E6;
+    --gray: #6B625F;
+    --dark: #292524;
 }
 
 
@@ -84,13 +94,13 @@ header {
 }
 
 .logo-text h2 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     font-size: 20px;
     line-height: 1.2;
 }
 
 .logo-text p {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 12px;
     font-weight: 500;
 }
@@ -111,17 +121,17 @@ header {
 
 .nav-links a:hover,
 .nav-links a.active {
-    color: var(--primary-blue);
+    color: var(--primary-color);
 }
 
 .nav-links a.active {
     font-weight: 700;
-    border-bottom: 3px solid var(--primary-yellow);
+    border-bottom: 3px solid var(--accent-color);
     padding-bottom: 5px;
 }
 
 .login-btn {
-    background: var(--primary-blue);
+    background: var(--primary-color);
     color: var(--white);
     padding: 11px 25px;
     border-radius: 8px;
@@ -131,7 +141,7 @@ header {
 }
 
 .login-btn:hover {
-    background: var(--dark-blue);
+    background: var(--dark-color);
 }
 
 
@@ -166,7 +176,7 @@ header {
 }
 
 .hero-small {
-    color: var(--primary-yellow);
+    color: var(--accent-color);
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
@@ -182,7 +192,7 @@ header {
 .hero-content > p:not(.hero-small) {
     max-width: 650px;
     font-size: 17px;
-    color: #E5E7EB;
+    color: #F3EBDD;
     margin-bottom: 35px;
 }
 
@@ -202,12 +212,12 @@ header {
 }
 
 .primary-btn {
-    background: var(--primary-yellow);
-    color: var(--dark-blue);
+    background: var(--accent-color);
+    color: var(--dark-color);
 }
 
 .primary-btn:hover {
-    background: var(--dark-yellow);
+    background: var(--accent-hover);
     transform: translateY(-2px);
 }
 
@@ -218,7 +228,7 @@ header {
 
 .secondary-btn:hover {
     background: var(--white);
-    color: var(--dark-blue);
+    color: var(--dark-color);
 }
 
 
@@ -238,7 +248,7 @@ header {
 }
 
 .search-content h2 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     font-size: 32px;
     margin-bottom: 8px;
 }
@@ -279,9 +289,9 @@ header {
 .search-box button {
     border: none;
 
-    background: var(--primary-yellow);
+    background: var(--accent-color);
 
-    color: var(--dark-blue);
+    color: var(--dark-color);
 
     padding: 0 25px;
 
@@ -295,7 +305,7 @@ header {
 }
 
 .search-box button:hover {
-    background: var(--dark-yellow);
+    background: var(--accent-hover);
 }
 
 
@@ -336,12 +346,12 @@ header {
 
 .stat-card i {
     font-size: 35px;
-    color: var(--primary-blue);
+    color: var(--primary-color);
     margin-bottom: 12px;
 }
 
 .stat-card h2 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     font-size: 30px;
 }
 
@@ -363,14 +373,14 @@ header {
 
 .section-heading p,
 .section-label {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 13px;
     font-weight: 700;
     letter-spacing: 1.5px;
 }
 
 .section-heading h2 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     font-size: 38px;
     margin: 5px 0 10px;
 }
@@ -426,9 +436,9 @@ header {
     align-items: center;
     justify-content: center;
 
-    background: var(--light-blue);
+    background: var(--light-accent);
 
-    color: var(--primary-blue);
+    color: var(--primary-color);
 
     border-radius: 12px;
 
@@ -438,7 +448,7 @@ header {
 }
 
 .service-card h3 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     margin-bottom: 10px;
 }
 
@@ -449,7 +459,7 @@ header {
 }
 
 .service-card a {
-    color: var(--primary-blue);
+    color: var(--primary-color);
     font-size: 14px;
     font-weight: 600;
 }
@@ -486,7 +496,7 @@ header {
 }
 
 .about-content h2 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
     font-size: 40px;
     margin: 8px 0 20px;
 }
@@ -506,7 +516,7 @@ header {
 ========================================= */
 
 .announcement {
-    background: var(--dark-blue);
+    background: var(--dark-color);
 
     color: var(--white);
 
@@ -529,9 +539,9 @@ header {
     align-items: center;
     justify-content: center;
 
-    background: var(--primary-yellow);
+    background: var(--accent-color);
 
-    color: var(--dark-blue);
+    color: var(--dark-color);
 
     border-radius: 50%;
 
@@ -539,7 +549,7 @@ header {
 }
 
 .announcement p {
-    color: var(--primary-yellow);
+    color: var(--accent-color);
 
     font-size: 12px;
 
@@ -554,7 +564,7 @@ header {
 }
 
 .announcement span {
-    color: #D1D5DB;
+    color: #E5D7C8;
     font-size: 14px;
 }
 
@@ -595,13 +605,13 @@ header {
 .contact-card i {
     font-size: 30px;
 
-    color: var(--primary-blue);
+    color: var(--primary-color);
 
     margin-bottom: 15px;
 }
 
 .contact-card h3 {
-    color: var(--dark-blue);
+    color: var(--dark-color);
 
     margin-bottom: 5px;
 }
@@ -618,7 +628,7 @@ header {
 ========================================= */
 
 footer {
-    background: #00264D;
+    background: #3A0D1B;
 
     color: var(--white);
 }
@@ -642,13 +652,13 @@ footer {
 }
 
 .footer-content h3 {
-    color: var(--primary-yellow);
+    color: var(--accent-color);
 
     margin-bottom: 15px;
 }
 
 .footer-content p {
-    color: #CBD5E1;
+    color: #E5D7C8;
 
     font-size: 14px;
 }
@@ -656,7 +666,7 @@ footer {
 .footer-content a {
     display: block;
 
-    color: #CBD5E1;
+    color: #E5D7C8;
 
     font-size: 14px;
 
@@ -666,7 +676,7 @@ footer {
 }
 
 .footer-content a:hover {
-    color: var(--primary-yellow);
+    color: var(--accent-color);
 }
 
 .footer-bottom {
@@ -678,7 +688,7 @@ footer {
 }
 
 .footer-bottom p {
-    color: #94A3B8;
+    color: #B9A39A;
 
     font-size: 13px;
 }
