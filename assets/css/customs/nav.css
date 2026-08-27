@@ -1,0 +1,23 @@
+/* =========================================
+   NAV.CSS
+========================================= */
+
+.nav-link {
+    color: var(--color-dark);
+    transition: var(--transition-fast);
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: var(--color-primary);
+}
+
+.nav-link.active {
+    font-weight: var(--font-weight-bold);
+    border-bottom: 3px solid var(--color-navy);
+    padding-bottom: 5px;
+}
+
+.btn-login:hover {
+    background: var(--color-secondary);
+}
