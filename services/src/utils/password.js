@@ -6,10 +6,11 @@ async function hashPassword(password) {
 }
 
 async function comparePassword(password, hashedPassword) {
-  return await bcrypt.comparePassword(password, hashedPassword);
+  return await bcrypt.compare(password, hashedPassword);
 }
 
 module.exports = {
   hashPassword,
   comparePassword,
 };
+``;
