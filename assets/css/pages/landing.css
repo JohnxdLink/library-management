@@ -3,6 +3,12 @@
    BRITECH COLLEGE LIBRARY
    
 ========================================= */
+
+@import url("../customs/global.css");
+@import url("../customs/announcement.css");
+@import url("../customs/responsive.css");
+@import url("../component/search/search.css");
+
 * {
   box-sizing: border-box;
 }
