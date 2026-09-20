@@ -1,0 +1,10 @@
+@import url("../layout/header.css");
+@import url("../layout/footer.css");
+@import url("../layout/main-container.css");
+@import url("../component/buttons/base.css");
+@import url("../component/inputs/base.css");
+@import url("../component/loader/base.css");
+
+.btn-search {
+  color: var(--color-white);
+}

@@ -3,152 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sign In | Britech College Library</title>
+    <title>Library | Sign In</title>
 
     <link rel="stylesheet" href="../assets/css/style.css" />
     <link rel="stylesheet" href="../assets/css/pages/sign-in.css" />
   </head>
 
-  <body>
-    <!-- =========================
-     NAVIGATION
-========================= -->
-    <header class="bg-white shadow-sm position-sticky top-0 z-50">
-      <nav class="navbar container d-flex items-center justify-between gap-8 px-6 py-3">
-        <div class="d-flex items-center gap-3">
-          <img src="../assets/images/logo/britech-logo (1).png" alt="Britech College Logo" class="w-64 h-64 d-block" />
-          <div>
-            <h2 class="text-secondary text-lg font-semibold">Britech College</h2>
-            <p class="text-primary text-12 font-medium">Library Portal</p>
-          </div>
-        </div>
-
-        <ul class="nav-links d-flex items-center gap-8">
-          <li><a href="../index.html" class="nav-link text-14 font-medium">Home</a></li>
-          <li><a href="../catalog.html" class="nav-link text-14 font-medium">Catalog</a></li>
-          <li><a href="../index.html#services" class="nav-link text-14 font-medium">Services</a></li>
-          <li><a href="../index.html#about" class="nav-link text-14 font-medium">About</a></li>
-          <li><a href="../index.html#contact" class="nav-link text-14 font-medium">Contact</a></li>
-        </ul>
-
-        <a href="sign-in.html" class="btn-login bg-primary text-white px-6 py-3 radius-md text-14 font-semibold">
-          Login</a
-        >
-      </nav>
-    </header>
-
-    <!-- =========================
-     SIGN-IN SECTION
-========================= -->
-    <section class="bg-accent d-flex items-center justify-center auth-wrapper px-6">
-      <div class="bg-white radius-xl shadow-lg p-8 w-100" style="max-width: 440px">
-        <div class="text-center mb-8">
-          <p class="text-primary text-12 font-bold">WELCOME BACK</p>
-          <h1 class="text-secondary text-3xl my-2">Library Sign In</h1>
-          <p class="text-gray text-14">Sign in to manage your borrowings and account.</p>
-        </div>
-
-        <form id="signInForm" class="d-flex flex-column gap-5" novalidate>
-          <div>
-            <label for="loginId" class="d-block text-secondary text-14 font-semibold mb-2">Username or Email</label>
-            <div class="input-group d-flex items-center gap-3 bg-white border border-light-gray radius-md px-4">
-              <i class="fa-solid fa-envelope text-primary"></i>
-              <input
-                type="text"
-                id="loginId"
-                name="loginId"
-                placeholder="Enter your username or email"
-                class="flex-grow-1 w-100 border-0 py-3 text-14"
-                required
-              />
-            </div>
-          </div>
-
-          <div>
-            <label for="loginPassword" class="d-block text-secondary text-14 font-semibold mb-2">Password</label>
-            <div class="input-group d-flex items-center gap-3 bg-white border border-light-gray radius-md px-4">
-              <i class="fa-solid fa-lock text-primary"></i>
-              <input
-                type="password"
-                id="loginPassword"
-                name="loginPassword"
-                placeholder="Enter your password"
-                class="flex-grow-1 w-100 border-0 py-3 text-14"
-                required
-              />
-              <button
-                type="button"
-                id="togglePassword"
-                class="toggle-visibility bg-transparent border-0 flex-shrink-0"
-                aria-label="Show password"
-              >
-                <span class="icon-stack">
-                  <i class="fa-solid fa-eye icon-eye"></i>
-                  <i class="fa-solid fa-eye-slash icon-eye-slash"></i>
-                </span>
-              </button>
-            </div>
-          </div>
-
-          <div class="d-flex items-center justify-between flex-wrap gap-2 text-14">
-            <label class="d-flex items-center gap-2 text-gray">
-              <input type="checkbox" id="rememberMe" name="rememberMe" />
-              Remember me
-            </label>
-            <a href="#" class="text-primary font-semibold">Forgot password?</a>
-          </div>
-
-          <button type="submit" class="btn-submit bg-primary text-white py-4 radius-md font-semibold border-0 w-100">
-            Sign In
-          </button>
-
-          <p id="loginError" class="text-14" style="color: #dc2626; display: none"></p>
-        </form>
-
-        <div class="auth-divider my-6 text-gray text-12">
-          <span>OR</span>
-        </div>
-
-        <p class="text-center text-14 text-gray">
-          Don't have an account?
-          <a href="register.html" class="text-primary font-semibold">Create one</a>
-        </p>
+  <body class="h-screen bg-primary d-flex flex-column items-center justify-center">
+    <section class="p-10 w-512 bg-accent rounded-lg">
+      <div class="mb-8">
+        <a class="btn-ghost" href="../index.html">Return</a>
+        <p class="text-primary text-12 text-center font-bold">WELCOME BACK</p>
+        <h1 class="text-secondary text-3xl text-center my-2">Library Sign In</h1>
+        <p class="text-gray text-14 text-center">Sign in to manage your borrowings and account.</p>
       </div>
+
+      <form id="signInForm" class="d-flex flex-column gap-5" novalidate>
+        <div>
+          <label for="signIn" class="mb-2 label">Username</label>
+          <div class="pl-3 d-flex flex-row items-center bg-light gap-1">
+            <i class="fa-solid fa-envelope text-primary text-md"></i>
+            <input
+              type="text"
+              id="signIn"
+              name="signIn"
+              placeholder="Enter your username or email"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+
+        <div>
+          <label for="loginPassword" class="mb-2 label">Password</label>
+          <div class="pl-3 d-flex flex-row items-center bg-light gap-2">
+            <i class="fa-solid fa-lock text-primary text-md"></i>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              class="input"
+              required
+            />
+          </div>
+        </div>
+
+        <div class="d-flex items-center justify-between flex-wrap gap-2 text-14">
+          <label class="d-flex items-center gap-2 text-gray">
+            <input type="checkbox" id="rememberMe" name="rememberMe" />
+            Remember me
+          </label>
+          <a href="#" class="text-primary font-semibold">Forgot password?</a>
+        </div>
+
+        <button type="submit" class="btn-primary btn-white">Sign In</button>
+      </form>
+
+      <div class="auth-divider my-6 text-gray text-12">
+        <span>OR</span>
+      </div>
+
+      <p class="text-center text-14 text-gray">
+        Don't have an account?
+        <a href="register.html" class="text-primary font-semibold">Create one</a>
+      </p>
     </section>
-
-    <!-- =========================
-     FOOTER
-========================= -->
-    <footer class="footer-bg text-white">
-      <div class="container footer-grid d-grid gap-10 mx-auto py-16 px-6">
-        <div>
-          <h2 class="mb-3">Britech College Library</h2>
-          <p class="text-14 footer-muted">Your gateway to knowledge and learning resources.</p>
-        </div>
-
-        <div>
-          <h3 class="text-navy mb-4">Quick Links</h3>
-          <a href="../index.html" class="d-block text-14 footer-link mb-2">Home</a>
-          <a href="../catalog.html" class="d-block text-14 footer-link mb-2">Catalog</a>
-          <a href="sign-in.html" class="d-block text-14 footer-link mb-2">Login</a>
-        </div>
-
-        <div>
-          <h3 class="text-navy mb-4">Library</h3>
-          <a href="../index.html#services" class="d-block text-14 footer-link mb-2">Services</a>
-          <a href="../index.html#about" class="d-block text-14 footer-link mb-2">About</a>
-          <a href="../index.html#contact" class="d-block text-14 footer-link mb-2">Contact</a>
-        </div>
-      </div>
-
-      <div class="footer-bottom border-t text-center py-5 px-6">
-        <p class="text-12 footer-copy">© <span id="year">2026</span> Britech College Library. All Rights Reserved.</p>
-      </div>
-    </footer>
-
-    <!-- =========================
-     JAVASCRIPT
-========================= -->
-    <script src="../assets/js/main.js"></script>
   </body>
 </html>
