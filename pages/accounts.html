@@ -1,210 +1,195 @@
+```html
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>Accounts | Britech College Library</title>
 
-    <!-- Main CSS -->
+    <!-- CSS -->
     <link rel="stylesheet" href="../assets/css/style.css" />
-
-    <!-- Accounts CSS -->
     <link rel="stylesheet" href="../assets/css/pages/accounts.css" />
   </head>
 
   <body>
-    <!-- =====================================================
-         SIDEBAR
-    ====================================================== -->
-
+    <!-- SIDEBAR -->
     <aside class="sidebar">
-      <!-- Sidebar Brand -->
-      <div class="sidebar-brand">
-        <a href="dashboard.html">
-          <img src="../assets/images/logo/britech-logo.png" alt="Britech College Library Logo" />
+      <!-- BRAND -->
+      <div class="sidebar-brand d-flex items-center gap-3 py-6 px-5">
+        <img src="../assets/images/logo/britech-logo.png" alt="Britech College Logo" />
 
-          <div>
-            <h2>Britech Library</h2>
-
-            <p>COLLEGE LIBRARY</p>
-          </div>
-        </a>
+        <div>
+          <h2>BRITECH LIBRARY</h2>
+          <p>MANAGEMENT SYSTEM</p>
+        </div>
       </div>
 
-      <!-- Sidebar Navigation -->
-      <nav class="sidebar-nav">
-        <a href="dashboard.html" class="sidebar-link"> Dashboard </a>
+      <!-- NAVIGATION -->
+      <nav class="sidebar-nav d-flex py-4 px-3 gap-1" id="sidebarNav">
+        <a href="dashboard.html" class="sidebar-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Dashboard</span>
+        </a>
 
-        <a href="books.html" class="sidebar-link"> Books </a>
+        <a href="students.html" class="sidebar-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium">
+          <i class="fa-solid fa-user-graduate"></i>
+          <span>Students</span>
+        </a>
 
-        <a href="borrow-return.html" class="sidebar-link"> Borrow / Return </a>
+        <a
+          href="accounts.html"
+          class="sidebar-link active d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          aria-current="page"
+        >
+          <i class="fa-solid fa-users-gear"></i>
+          <span>Accounts</span>
+        </a>
 
-        <a href="accounts.html" class="sidebar-link active"> Accounts </a>
+        <!-- BOOKS -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-book"></i>
+            <span>Books</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="books/books.html" class="sidebar-sublink px-4 radius-md font-medium"> Books </a>
+
+            <a href="books/categories.html" class="sidebar-sublink px-4 radius-md font-medium"> Categories </a>
+            <a href="books/authors.html" class="sidebar-sublink px-4 radius-md font-medium"> Authors</a>
+          </div>
+        </details>
+
+        <!-- SCHOOL -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-school"></i>
+            <span>School</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="school/school-year.html" class="sidebar-sublink px-4 radius-md font-medium"> Year </a>
+
+            <a href="school/section.html" class="sidebar-sublink px-4 radius-md font-medium"> Section </a>
+
+            <a href="school/strand.html" class="sidebar-sublink px-4 radius-md font-medium"> Strand </a>
+          </div>
+        </details>
+
+        <!-- TRANSACTIONS -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-right-left"></i>
+            <span>Transactions</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="transactions/borrow.html" class="sidebar-sublink px-4 radius-md font-medium"> Borrow </a>
+
+            <a href="transactions/return.html" class="sidebar-sublink px-4 radius-md font-medium"> Return </a>
+
+            <a href="transactions/fines.html" class="sidebar-sublink px-4 radius-md font-medium"> Fines </a>
+
+            <a href="transactions/reservations.html" class="sidebar-sublink px-4 radius-md font-medium">
+              Reservations
+            </a>
+          </div>
+        </details>
+
+        <!-- REPORTS -->
+        <details class="sidebar-group">
+          <summary
+            class="sidebar-link sidebar-group-toggle d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+          >
+            <i class="fa-solid fa-chart-column"></i>
+            <span>Reports</span>
+          </summary>
+
+          <div class="sidebar-submenu">
+            <a href="reports/borrowing.html" class="sidebar-sublink px-4 radius-md font-medium"> Borrowing </a>
+
+            <a href="reports/returns.html" class="sidebar-sublink px-4 radius-md font-medium"> Returns </a>
+
+            <a href="reports/fines.html" class="sidebar-sublink px-4 radius-md font-medium"> Fines </a>
+
+            <a href="reports/inventory.html" class="sidebar-sublink px-4 radius-md font-medium"> Inventory </a>
+
+            <a href="reports/students.html" class="sidebar-sublink px-4 radius-md font-medium"> Students </a>
+          </div>
+        </details>
       </nav>
 
-      <!-- Sidebar Logout -->
-      <div class="sidebar-logout">
-        <a href="../index.html" class="sidebar-link logout-link"> Logout </a>
+      <!-- LOGOUT -->
+      <div class="sidebar-logout py-4 px-5">
+        <a
+          href="../auth/sign-in.html"
+          class="sidebar-link logout-link d-flex items-center gap-3 px-4 py-3 radius-md text-14 font-medium"
+        >
+          <i class="fa-solid fa-right-from-bracket"></i>
+          <span>Logout</span>
+        </a>
       </div>
     </aside>
 
-    <!-- =====================================================
-         MAIN AREA
-    ====================================================== -->
-
+    <!-- MAIN AREA -->
     <main class="main-area">
-      <!-- ===================================================
-           TOPBAR
-      ==================================================== -->
-
+      <!-- TOPBAR -->
       <header class="topbar">
-        <div>
-          <h1>Accounts</h1>
+        <!-- SEARCH -->
+        <form class="dashboard-search-container" role="search" id="dashboardSearchForm">
+          <div class="dashboard-search-shell">
+            <i class="fa-solid fa-magnifying-glass search-icon"></i>
 
-          <p>Manage library accounts</p>
+            <input
+              type="search"
+              class="search-input"
+              id="dashboardSearch"
+              name="search"
+              placeholder="Search books, students, transactions..."
+              aria-label="Search books, students, transactions"
+              autocomplete="off"
+            />
+          </div>
+        </form>
+
+        <!-- RIGHT SIDE -->
+        <div class="topbar-profile">
+          <div class="notification-wrapper">
+            <button
+              type="button"
+              class="notification-button"
+              id="notificationButton"
+              aria-label="Notifications"
+              aria-expanded="false"
+              aria-controls="notificationDropdown"
+            >
+              <i class="fa-regular fa-bell"></i>
+              <span class="notification-dot" id="notifDot" hidden></span>
+            </button>
+
+            <div class="notification-dropdown" id="notificationDropdown">
+              <div class="notification-header">Notifications</div>
+              <p class="notification-empty">No new notifications.</p>
+            </div>
+          </div>
+
+          <div class="profile-avatar">AL</div>
+
+          <div class="profile-info">
+            <strong>Admin Librarian</strong>
+            <span>Librarian</span>
+          </div>
         </div>
       </header>
-
-      <!-- ===================================================
-           PAGE CONTENT
-      ==================================================== -->
-
-      <section class="page-content">
-        <!-- =================================================
-             PAGE HEADER
-        ================================================== -->
-
-        <div class="accounts-header d-flex justify-between items-center border-b pb-3 mb-4">
-          <div>
-            <h2 class="text-xl font-bold mb-1">Library Accounts</h2>
-
-            <p class="text-sm text-gray">View and manage user accounts.</p>
-          </div>
-
-          <button type="button" class="btn btn-primary" id="addAccountButton">Add Account</button>
-        </div>
-
-        <!-- =================================================
-             ADD ACCOUNT FORM
-        ================================================== -->
-
-        <div class="card add-account-card border rounded-md p-4 mb-4" id="addAccountForm">
-          <!-- Form Header -->
-          <div class="card-header border-0 p-0 mb-4">
-            <h3 class="text-lg font-bold mb-1">Add Account</h3>
-
-            <p class="text-sm text-gray">Create a new library account.</p>
-          </div>
-
-          <!-- Account Form -->
-          <form action="" method="POST">
-            <!-- Username -->
-            <div class="form-group">
-              <label for="username" class="d-block text-sm font-semibold mb-2"> Username </label>
-
-              <input type="text" id="username" name="username" maxlength="12" required placeholder="Enter username" />
-
-              <small class="d-block text-xs text-gray mt-1"> Maximum of 12 characters. </small>
-            </div>
-
-            <!-- Password -->
-            <div class="form-group">
-              <label for="password" class="d-block text-sm font-semibold mb-2"> Password </label>
-
-              <input type="password" id="password" name="password" required placeholder="Enter password" />
-            </div>
-
-            <!-- Confirm Password -->
-            <div class="form-group">
-              <label for="confirm_password" class="d-block text-sm font-semibold mb-2"> Confirm Password </label>
-
-              <input
-                type="password"
-                id="confirm_password"
-                name="confirm_password"
-                required
-                placeholder="Confirm password"
-              />
-            </div>
-
-            <!-- Form Buttons -->
-            <div class="form-actions d-flex gap-2">
-              <button type="submit" class="btn btn-primary">Add Account</button>
-
-              <button type="button" class="btn btn-secondary" id="cancelAccountButton">Cancel</button>
-            </div>
-          </form>
-        </div>
-
-        <!-- =================================================
-             ACCOUNTS TABLE
-        ================================================== -->
-
-        <div class="card accounts-table-card border rounded-md p-4">
-          <!-- Table Header -->
-          <div class="card-header border-0 p-0 mb-4">
-            <h3 class="text-lg font-bold mb-1">Accounts</h3>
-
-            <p class="text-sm text-gray">Registered library accounts.</p>
-          </div>
-
-          <!-- Table -->
-          <div class="table-container overflow-x">
-            <table class="accounts-table w-100">
-              <!-- Table Head -->
-              <thead>
-                <tr>
-                  <th>ID</th>
-
-                  <th>Username</th>
-
-                  <th>Created At</th>
-
-                  <th>Updated At</th>
-
-                  <th>Actions</th>
-                </tr>
-              </thead>
-
-              <!-- Table Body -->
-              <tbody>
-                <!-- Admin Account -->
-                <tr>
-                  <td>1</td>
-
-                  <td>admin</td>
-
-                  <td>2026-10-07</td>
-
-                  <td>2026-10-07</td>
-
-                  <td>
-                    <div class="d-flex gap-2">
-                      <!-- Edit -->
-                      <button type="button" class="btn btn-small">Edit</button>
-
-                      <!-- Delete -->
-                      <button type="button" class="btn btn-small btn-danger">Delete</button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
     </main>
 
-    <!-- =====================================================
-         JAVASCRIPT
-    ====================================================== -->
-
-    <!-- Main JavaScript -->
     <script src="../assets/js/main.js"></script>
-
-    <!-- Accounts JavaScript -->
-    <script src="../assets/js/pages/accounts.js"></script>
   </body>
 </html>

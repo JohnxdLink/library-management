@@ -1,325 +1,264 @@
-/* =========================================================
-   BRITECH LIBRARY
-   ACCOUNTS PAGE STYLES
-========================================================= */
+@import url("../component/buttons/base.css");
+@import url("../component/inputs/base.css");
+@import url("../cards/cards.css");
+@import url("../search/search.css");
+@import url("../tables/base.css");
+@import url("../tables/table.css");
+@import url("../layout/header.css");
+@import url("../layout/main-container.css");
+@import url("../layout/footer.css");
+@import url("../component/animations/animations.css");
+@import url("../layout/aside.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css");
 
-/* =========================================================
-   PAGE HEADER
-========================================================= */
-
-.accounts-header {
-  gap: var(--space-20);
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--color-accent);
 }
 
-.accounts-header h2 {
-  color: var(--color-dark);
+.main-area {
+  margin-left: 272px;
+  min-height: 100vh;
+  min-width: 0;
+  background: var(--color-accent);
 }
 
-.accounts-header p {
-  color: var(--color-gray);
-}
-
-/* =========================================================
-   ADD ACCOUNT CARD
-========================================================= */
-
-.add-account-card {
-  background-color: var(--color-white);
-}
-
-.add-account-card .card-header {
-  border-bottom: var(--border-thin) solid var(--color-light-gray);
-  padding-bottom: var(--space-16);
-}
-
-.add-account-card .card-header h3 {
-  color: var(--color-dark);
-}
-
-.add-account-card .card-header p {
-  color: var(--color-gray);
-}
-
-/* =========================================================
-   FORM
-========================================================= */
-
-.form-group {
-  margin-bottom: var(--space-16);
-}
-
-.form-group input {
-  display: block;
+.accounts-content {
+  padding: 28px 32px 40px;
   width: 100%;
   box-sizing: border-box;
+}
 
-  padding: var(--space-12);
+.accounts-content *,
+.accounts-content *::before,
+.accounts-content *::after {
+  box-sizing: border-box;
+}
 
-  border: var(--border-thin) solid var(--color-light-gray);
-  border-radius: var(--radius-md);
+.topbar {
+  height: 72px;
+  padding: 0 32px;
+  margin: 0;
+  box-sizing: border-box;
+  background: #fff;
+  border-bottom: 1px solid #eee;
 
-  background-color: var(--color-white);
-  color: var(--color-dark);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
 
-  font-family: inherit;
-  font-size: var(--font-size-14);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
 
+.dashboard-search-container {
+  width: 430px;
+  max-width: 100%;
+  margin: 0;
+  flex: 1;
+}
+
+.dashboard-search-shell {
+  width: 100%;
+  position: relative;
+}
+
+.dashboard-search-shell .search-icon {
+  position: absolute;
+  top: 50%;
+  left: 18px;
+  transform: translateY(-50%);
+  color: #999;
+  font-size: 14px;
+  pointer-events: none;
+}
+
+.search-input {
+  display: block;
+  width: 100%;
+  height: 42px;
+  padding: 0 20px 0 44px;
+
+  border: 1px solid transparent;
+  border-radius: 24px;
   outline: none;
 
+  background: #f5f5f7;
+  color: #333;
+  font-size: 13px;
+
   transition:
-    border-color var(--transition-fast),
-    box-shadow var(--transition-fast);
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
-/* =========================================================
-   INPUT PLACEHOLDER
-========================================================= */
-
-.form-group input::placeholder {
-  color: var(--color-light-gray);
+.search-input:focus {
+  background: #fff;
+  border-color: #941f43;
+  box-shadow: 0 0 0 3px rgba(148, 31, 67, 0.12);
 }
 
-/* =========================================================
-   INPUT HOVER
-========================================================= */
+/* =========================================
+   PROFILE AND NOTIFICATIONS
+========================================= */
 
-.form-group input:hover {
-  border-color: var(--color-gray);
+.topbar-profile {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-shrink: 0;
 }
 
-/* =========================================================
-   INPUT FOCUS
-========================================================= */
+.profile-avatar {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+  border-radius: 50%;
 
-.form-group input:focus {
-  border-color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  box-shadow: 0 0 0 3px var(--color-primary-50);
+  background: #941f43;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
 }
 
-/* =========================================================
-   FORM HELP TEXT
-========================================================= */
-
-.form-group small {
-  color: var(--color-gray);
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.25;
 }
 
-/* =========================================================
-   FORM ACTIONS
-========================================================= */
-
-.form-actions {
-  margin-top: var(--space-20);
+.profile-info strong {
+  color: #5b0d2b;
+  font-size: 13px;
 }
 
-/* =========================================================
-   CANCEL BUTTON
-========================================================= */
-
-#cancelAccountButton {
-  background-color: var(--color-light);
-  color: var(--color-dark);
-
-  border: var(--border-thin) solid var(--color-light-gray);
+.profile-info span {
+  color: #777;
+  font-size: 11px;
 }
 
-#cancelAccountButton:hover {
-  background-color: var(--color-light-gray);
+.notification-wrapper {
+  position: relative;
+  flex-shrink: 0;
 }
 
-/* =========================================================
-   ACCOUNTS TABLE CARD
-========================================================= */
+.notification-button {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  padding: 0;
 
-.accounts-table-card {
-  background-color: var(--color-white);
-  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  color: #5b0d2b;
+
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.accounts-table-card .card-header {
-  border-bottom: var(--border-thin) solid var(--color-light-gray);
-
-  padding-bottom: var(--space-16);
+.notification-button:hover {
+  background: #f5f5f7;
 }
 
-.accounts-table-card .card-header h3 {
-  color: var(--color-dark);
+.notification-dot {
+  position: absolute;
+  top: 7px;
+  right: 8px;
+
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+
+  background: #941f43;
 }
 
-.accounts-table-card .card-header p {
-  color: var(--color-gray);
+.notification-dot[hidden] {
+  display: none;
 }
 
-/* =========================================================
-   TABLE CONTAINER
-========================================================= */
+.notification-dropdown {
+  display: none;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  width: 300px;
+  max-width: calc(100vw - 32px);
 
-.table-container {
-  width: 100%;
-  overflow-x: auto;
+  background: #fff;
+  border: 1px solid #eee;
+  border-radius: 10px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+
+  z-index: 1001;
 }
 
-/* =========================================================
-   TABLE
-========================================================= */
-
-.accounts-table {
-  border-collapse: collapse;
-  min-width: 650px;
+.notification-dropdown.show {
+  display: block;
 }
 
-/* =========================================================
-   TABLE HEADER
-========================================================= */
+.notification-header {
+  padding: 14px 16px;
+  border-bottom: 1px solid #eee;
 
-.accounts-table th {
-  padding: var(--space-12);
-
-  background-color: var(--color-accent);
-  color: var(--color-primary);
-
-  border-bottom: 2px solid var(--color-primary);
-
-  font-size: var(--font-size-14);
-  font-weight: var(--font-weight-semibold);
-
-  text-align: left;
-  white-space: nowrap;
+  color: #5b0d2b;
+  font-size: 13px;
+  font-weight: 700;
 }
 
-/* =========================================================
-   TABLE BODY
-========================================================= */
+.notification-empty {
+  margin: 0;
+  padding: 20px 16px;
 
-.accounts-table td {
-  padding: var(--space-12);
-
-  border-bottom: var(--border-thin) solid var(--color-light-gray);
-
-  color: var(--color-dark);
-
-  font-size: var(--font-size-14);
-
-  vertical-align: middle;
+  color: #777;
+  font-size: 12px;
+  text-align: center;
 }
 
-/* =========================================================
-   TABLE ROW HOVER
-========================================================= */
+/* =========================================
+   PAGE HEADING
+========================================= */
 
-.accounts-table tbody tr {
-  transition: background-color var(--transition-fast);
+.accounts-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 26px;
 }
 
-.accounts-table tbody tr:hover {
-  background-color: var(--color-primary-50);
+.accounts-eyebrow {
+  margin: 0 0 7px;
+
+  color: #941f43;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.3px;
 }
 
-/* =========================================================
-   LAST TABLE ROW
-========================================================= */
-
-.accounts-table tbody tr:last-child td {
-  border-bottom: none;
+.accounts-heading h1 {
+  margin: 0;
+  color: #4b1027;
+  font-size: 28px;
+  font-weight: 700;
+  line-height: 1.3;
 }
 
-/* =========================================================
-   ACTION COLUMN
-========================================================= */
-
-.accounts-table td:last-child {
-  white-space: nowrap;
-}
-
-/* =========================================================
-   SMALL BUTTON
-========================================================= */
-
-.btn-small {
-  padding: 7px 12px;
-  font-size: var(--font-size-12);
-}
-
-/* =========================================================
-   DELETE BUTTON
-========================================================= */
-
-.btn-danger {
-  background-color: #b42318;
-  color: var(--color-white);
-
-  border: var(--border-thin) solid #b42318;
-}
-
-.btn-danger:hover {
-  background-color: #912018;
-  border-color: #912018;
-}
-
-/* =========================================================
-   ADD ACCOUNT BUTTON
-========================================================= */
-
-#addAccountButton {
-  white-space: nowrap;
-}
-
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
-@media (max-width: 768px) {
-  .accounts-header {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: var(--space-12);
-  }
-
-  .accounts-header .btn {
-    width: 100%;
-  }
-
-  .add-account-card,
-  .accounts-table-card {
-    padding: var(--space-16);
-  }
-
-  .form-actions {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .form-actions .btn {
-    width: 100%;
-  }
-
-  .accounts-table {
-    min-width: 650px;
-  }
-}
-
-/* =========================================================
-   SMALL MOBILE
-========================================================= */
-
-@media (max-width: 480px) {
-  .accounts-header h2 {
-    font-size: var(--font-size-16);
-  }
-
-  .accounts-header p {
-    font-size: var(--font-size-12);
-  }
-
-  .add-account-card,
-  .accounts-table-card {
-    padding: var(--space-12);
-  }
-
-  .accounts-table th,
-  .accounts-table td {
-    padding: var(--space-8);
-    font-size: var(--font-size-12);
-  }
+.accounts-subtitle {
+  margin: 8px 0 0;
+  color: #85808a;
+  font-size: 13px;
+  line-height: 1.6;
 }
