@@ -8,7 +8,7 @@ const {
   FIND_STAFF_BY_EMAIL,
   UPDATE_STAFF,
   DELETE_STAFF,
-} = require("../database/queries/staffs-query.js");
+} = require("../database/queries/staff-query.js");
 
 // CREATE - Add a staff member
 const createStaff = async (account_id, role_id, lastname, firstname, contact_no = null, email = null) => {

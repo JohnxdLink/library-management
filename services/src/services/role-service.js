@@ -7,7 +7,7 @@ const {
   FIND_ROLE_BY_NAME,
   UPDATE_ROLE,
   DELETE_ROLE,
-} = require("../database/queries/roles-query.js");
+} = require("../database/queries/role-query.js");
 
 // CREATE - Add a role
 const createRole = async (name, description = null) => {
